@@ -16,8 +16,8 @@ Backup all your Bitbucket Repositories with this Shell Script. No extra packages
 
     <pre>bbuser='USERNAME' # Bitbucket username from https://bitbucket.org/USERNAME/reponame. Email id will not work as username.
     bbpass='PASSWORD'      # Password or App Password.
-    backloc="/backups/bitbucket" # Backup location on this system.
     team='TEAM'            # Account username for team (or same user again).
+    backloc="/backups/bitbucket" # Backup location on this system.
     </pre>
 
 
