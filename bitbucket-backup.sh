@@ -7,6 +7,7 @@
 #Bitbucket credentials
 bbuser='USERNAME' # Bitbucket Username
 bbpass='PASSWORD' # Generate APP password if you dont want to disclose the Password here
+team='TEAM'       # Account username for team (or same user again)
 #Backup Location
 backloc="/backups/bitbucket" #backup location on this system
 
@@ -18,7 +19,7 @@ cd $backloc
 bitbucket_get_urls () {
 rm -f bitbucketurls
 #Use Atlassian Bitbucket API v2.0
-curl -v --user $bbuser:$bbpass https://bitbucket.org/api/2.0/repositories/ACCOUNT?pagelen=100 > bitbucket.1
+curl -v --user $bbuser:$bbpass https://bitbucket.org/api/2.0/repositories/$team?pagelen=100 > bitbucket.1
 #Parsing
 tr ',' '\n' < bitbucket.1 > bitbucket.2
 tr -d '"{}[]' < bitbucket.2 > bitbucket.3
